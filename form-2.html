@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href='https://css.gg/css' rel='stylesheet'><!-- icon -->
     <link rel="stylesheet" href="form-2.css">
     <title>Summit-Register</title>
 </head>
@@ -15,11 +18,11 @@
         <nav>
             <div class="container">
                 <div class="nav-con">
-                    <div class="logo">
-                        <img src="../UI/img/logo.png" alt="Logo">
-                    </div>
                     <div class="title">
                         <h1>Summit Auto Body Industry</h1>
+                    </div>
+                    <div class="logo">
+                        <img src="../UI/img/logo.png" alt="Logo">
                     </div>
                 </div>
             </div>
@@ -34,29 +37,36 @@
             </div>
             <div class="content-input-1">
                 <div class="con-name-title">
-                    <h2>ชื่อต้น</h2>
-                    <select>
-                        <option value="">นาย</option>
-                        <option value="">นาง</option>
-                        <option value="">นางสาว</option>
+                    <label for="Tname" class="form-label">ชื่อต้น</label>
+                    <select id=Tname class="form-select" aria-label="Default select example">
+                        <option value="1">นาย</option>
+                        <option value="2">นาง</option>
+                        <option value="3">นางสาว</option>
                     </select>
                 </div>
                 <!-- end name-title -->
                 <div class="con-fullname">
-                    <div class="content-input name">
-                        <h2>ชื่อ</h2>
-                        <input id="F-name" type="text" name="fname">
+                    <div class="con-name">
+                        <label for="Tname" class="form-label">ชื่อ</label>
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="Fname" placeholder="ชื่อจริง">
+                            <label for="Fname">ชื่อ</label>
+                        </div>
+                    </div>
 
+                    <div class="con-lname">
+                        <label for="Tname" class="form-label">นามสกุล</label>
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="Lname" placeholder="นามสกุล">
+                            <label for="Lname">นามสกุล</label>
+                        </div>
                     </div>
-                    <div class="content-input lname">
-                        <h2>นามสกุล</h2>
-                        <input id="L-name" type="text" name="lname">
-                    </div>
+
                 </div>
                 <!-- end fullname -->
                 <div class="con-position">
-                    <h2>ตำแหน่งที่สนใจ</h2>
-                    <select name="posiiton">
+                    <label for="Positon" class="form-label">ตำแหน่งที่สนใจ</label>
+                    <select id=Positon class="form-select" aria-label="Default select example">
                         <option>Excutive Secretary</option>
                         <option>General Manager</option>
                         <option>Plant Manager</option>
@@ -65,9 +75,12 @@
                 </div>
                 <!-- end position -->
                 <div class="con-salary">
-                    <h2>เริ่มงานได้วันไหน</h2>
-                    <select>
-                        <option value="" selected disabled hidden>วันที่คุณสามารถเริ่มงานได้</option>
+                    <label for="Salary" class="form-label">เงินเดือนที่ต้องการ</label>
+                    <input type="text" class="form-control" id="Salary" placeholder="เงินเดือนที่ต้องการ">
+                </div>
+                <div class="con-startDate">
+                    <label for="StartDate" class="form-label">เริ่มงานได้วันไหน</label>
+                    <select id=StartDate class="form-select" aria-label="Default select example">
                         <option>โดยทันที</option>
                         <option>ใน 1-2 สัปดาห์</option>
                         <option>ใน 3-4 สัปดาห์</option>
@@ -79,18 +92,19 @@
             <!-- end content-input-1 -->
             <div class="content-input-2">
                 <div class="con-location">
-                    <h2>ที่อยู่ปัจจุบัน</h2>
-                    <textarea name="location" id="" cols="30" rows="5"></textarea>
+                    <label for="Address" class="form-label">ที่อยู่ปัจจุบัน</label>
+                    <textarea class="form-control" id="Address" rows="3"></textarea>
                 </div>
                 <div class="con-phone">
-                    <h2>เบอร์โทรศัพท์</h2>
-                    <input type="text">
+                    <label for="phone" class="form-label">เบอร์โทรศัพท์</label>
+                    <input type="text" class="form-control" id="phone" placeholder="เบอร์โทรศัพท์">
                 </div>
                 <div class="con-email">
-                    <h2>Email</h2>
-                    <input type="text">
+                    <label for="Email" class="form-label">E-mai</label>
+                    <input type="text" class="form-control" id="Email" placeholder="กรอกอีเมลของคุณ">
                 </div>
                 <div class="con-residence">
+                    <label for="Residence" class="form-label">การอยู่อาศัย</label>
                     <div class="form-check" id="Residence">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="choose-1" checked>
                         <label class="form-check-label" for="choose-1">
@@ -113,52 +127,61 @@
             </div>
             <div class="content-input-3">
                 <div class="workExp">
-                    <div class="head text">
-                        <h2>ประสบการณ์การทำงาน</h2>
-                    </div>
-                    <div class="head addform">
-                        <i class="uil uil-plus"></i>
-                        <h2>Add</h2>
+                    <div class="workExp-flex">
+                        <div class="head-text">
+                            <h2>Work Experience</h2>
+                        </div>
+                        <div class="head-addform">
+                            <i class="uil uil-plus"></i>
+                            <h2>Add</h2>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- end content-input-3 -->
             <div class="content-input-4">
-                <div class="head text">
-                    <h2>ประสบการณ์การทำงาน</h2>
-                </div>
-                <div class="head addform">
-                    <i class="uil uil-plus"></i>
-                    <h2>Add</h2>
+                <div class="language">
+                    <div class="head-text">
+                        <h2>Languages</h2>
+                    </div>
+                    <div class="head-addform">
+                        <i class="uil uil-plus"></i>
+                        <h2>Add</h2>
+                    </div>
                 </div>
             </div>
             <!-- end content-input-4 -->
             <div class="content-input-5">
-                <div class="head text">
-                    <h2>ประสบการณ์การทำงาน</h2>
+                <div class="talent">
+                    <div class="head-text">
+                        <h2>Talent</h2>
+                    </div>
+                    <div class="head-addform">
+                        <i class="uil uil-plus"></i>
+                        <h2>Add</h2>
+                    </div>
                 </div>
-                <div class="head addform">
-                    <i class="uil uil-plus"></i>
-                    <h2>Add</h2>
-                </div>
-                <div class="form talent-1">
+                
+            </div>
+            <div class="form-talent-1">
+                <div class="con-talent">
                     <h2>Talent 1</h2>
-                    <div class="con-car">
-                        <h3>ขับรถยนต์</h3>
-                        <select>
-                            <option value="" selected disabled hidden>ระบุ</option>
-                            <option>ได้</option>
-                            <option>ไม่ได้</option>
-                        </select>
-                    </div>
-                    <div class="con-computer">
-                        <h3>คอมพิวเตอร์</h3>
-                        <select>
-                            <option value="" selected disabled hidden>ระบุ</option>
-                            <option>ได้</option>
-                            <option>ไม่ได้</option>
-                        </select>
-                    </div>
+                <div class="con-car">
+                    <label for="StartDate" class="form-label">ขับรถยนต์</label>
+                    <select id=StartDate class="form-select" aria-label="Default select example">
+                        <option value="" selected disabled hidden>ระบุ</option>
+                        <option>ได้</option>
+                        <option>ไม่ได้</option>
+                    </select>
+                </div>
+                <div class="con-computer">
+                    <label for="StartDate" class="form-label">คอมพิวเตอร์</label>
+                    <select id=StartDate class="form-select" aria-label="Default select example">
+                        <option value="" selected disabled hidden>ระบุ</option>
+                        <option>ได้</option>
+                        <option>ไม่ได้</option>
+                    </select>
+                </div>
                 </div>
             </div>
             <!-- end content-input-5 -->
@@ -171,7 +194,9 @@
                 </div>
             </div>
             <!-- end content-input-6 -->
-            <button>ส่งใบสมัคร</button>
+            <div class="button">
+                <button type="button" class="bt-submit">ส่งใบสมัคร</button>
+              </div>
         </div>
         <!-- end container -->
     </section>
@@ -184,9 +209,9 @@
                     <span>Social Media Channels</span>
                 </div>
                 <div class="content-logo">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
+                    <i class="uil uil-facebook-f"></i>
+                    <i class="uil uil-twitter"></i>
+                    <i class="uil uil-youtube"></i>
                     <img src="" alt="">
                 </div>
             </div>
