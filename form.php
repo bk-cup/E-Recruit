@@ -18,7 +18,7 @@
                 <img src="../UI/img/logo.png" alt="Logo" width="90" height="60">
             </div>
             <ul class="menu">
-                <li><a href="#">Home</a></li>
+                <li><a href="#">Home1</a></li>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Home</a></li>
