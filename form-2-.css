@@ -12,6 +12,16 @@ header {
     width: 100%;
     height: 35px;
     background-color: #003159;
+    /* fix nav top */
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 99;
+    transition: top 0.3 ease-out;
+}
+header.hide{
+    top: -61px;
 }
 
 .container {
@@ -56,6 +66,8 @@ header {
 
 .content-heading h1 {
     font-size: 1.50rem;
+    margin-top: 60px;
+    margin-bottom: 30px;
 }
 
 h2 {

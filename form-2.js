@@ -1,3 +1,29 @@
+let topHeader = document.querySelector('header')
+let lastScrollY = 0
+console.log("hide")
+window.addEventListener('scroll', () => {
+    if (window.scrollY > lastScrollY){
+        topHeader.classList.add('hide')
+        console.log("เข้าแล้วววววววว")
+    }else{
+        topHeader.classList.remove('hide')
+        console.log("ม่ายยยยยยยยยยย")
+    }
+    lastScrollY = window.scrollY
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 //selecting all required elements
 console.log("Hi")
 const dropArea = document.querySelector(".content-input-6 .container")
@@ -45,3 +71,6 @@ dropArea.addEventListener("drop", (event)=>{
         dropArea.classList.remove("active")
     }
 });
+
+
+
