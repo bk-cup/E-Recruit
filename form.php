@@ -19,11 +19,11 @@
             </div>
             <ul class="menu">
                 <li><a href="#">Home1</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
+                <li><a href="#">Home2</a></li>
+                <li><a href="#">Home3</a></li>
+                <li><a href="#">Home4</a></li>
+                <li><a href="#">Home5</a></li>
+                <li><a href="#">Home6</a></li>
                 </ul>
         </nav>
     </header>
