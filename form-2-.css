@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100;200;300;400;600;900&family=Poppins:ital,wght@0,500;1,500;1,600;1,700&family=Roboto:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans Thai', sans-serif;
+    box-sizing: border-box;
+}
+
+/*********************** Header ***********************/
+header {
+    width: 100%;
+    height: 35px;
+    background-color: #003159;
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav-con .container{
+    width: 100%;
+    height: auto;
+}
+.title{
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.nav-con h1 {
+    font-size: 1rem;
+    color: #fff;
+    width: 940px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-family: 'poppins', sans-serif;
+    letter-spacing: 1px;
+
+}
+
+.nav-con img {
+
+    width: 55px;
+    height: 35px;
+}
+
+/*********************** content ***********************/
+.content {
+    width: 100%;
+    height: auto;
+    background: #fff;
+}
+
+.content-heading h1 {
+    font-size: 1.50rem;
+}
+
+h2 {
+    font-size: 0.9rem;
+}
+
+.content-input-1 .fullname {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.content-input-1 .fullname .name {
+    margin: 5px 5px;
+}
+
+.content-heading {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/*********************** content-input-1 ***********************/
+.content-input-1 {
+    width: 100%;
+    background-color: #DFF1FF;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.con-name-title {
+    margin: 10px 0;
+}
+
+.con-fullname {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 20px;
+}
+
+.con-fullname .con-name {
+    margin-right: 20px;
+
+}
+
+.con-fullname .con-lname {}
+
+.con-position {
+    margin-bottom: 20px;
+}
+
+.con-salary {
+    margin-bottom: 20px;
+}
+
+.con-startDate {
+    margin: 10px 0;
+}
+
+/*********************** content-input-2 ***********************/
+.content-input-2 {
+    width: 100%;
+    background-color: #DFF1FF;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+}
+
+.con-location {
+    margin-bottom: 20px;
+}
+
+.con-phone {
+    margin-bottom: 20px;
+}
+
+.con-email {
+    margin-bottom: 20px;
+}
+
+.con-residence {
+    margin: 10px 0;
+}
+.con-residence .container{
+    display: flex;
+    flex-direction: row;
+}
+.con-residence .container div{
+    
+    margin-right: 50px;
+    
+}
+/*********************** content-input-3 ***********************/
+.content-input-3 {
+    padding: 10px 0;
+    background-color: #DFF1FF;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    
+}
+.content-input-3 .head-addform:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.content-input-3 .workExp {
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.workExp-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.workExp .head-addform {
+    display: flex;
+    align-items: center;
+    transition: .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.workExp .head-addform i {
+    margin-right: 2px;
+    margin-top: 3.5px;
+}
+
+.workExp .head-addform h2 {
+    width: 40px;
+    margin-top: 12px;
+}
+
+
+/*********************** content-input-4 ***********************/
+.content-input-4 {
+    padding: 10px 0;
+    background-color: #DFF1FF;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+}
+
+.content-input-4 .language {
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.language .head-addform {
+    display: flex;
+    align-items: center;
+    transition: .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.language .head-addform i {
+    margin-right: 2px;
+    margin-top: 3.5px;
+}
+
+.language .head-addform h2 {
+    width: 40px;
+    margin-top: 12px;
+}
+.content-input-4 .head-addform:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+
+/*********************** content-input-5 ***********************/
+.content-input-5 {
+    padding: 10px 0;
+    background-color: #DFF1FF;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+}
+
+.content-input-5 .talent {
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.talent .head-addform {
+    display: flex;
+    align-items: center;
+    transition: .3s ease-in-out;
+    border-radius: 10px;
+}
+
+
+.talent .head-addform i {
+    margin-right: 2px;
+    margin-top: 3.5px;
+}
+
+.talent .head-addform h2 {
+    width: 40px;
+    margin-top: 12px;
+}
+
+.form-talent-1 {
+    margin-top: 3px;
+    position: relative;
+    width: 100%;
+    border-radius: 5px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-talent-1 .container {
+    /* --------------------------- */
+    padding: 20px 20px;
+    width: 95%;
+    border-radius: 0 0 10px 10px;
+    background-color: #DFF1FF;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.con-talent .con-car {
+    margin-bottom: 20px;
+}
+
+.con-talent .con-computer {
+    margin-bottom: 10px;
+}
+.content-input-5 .head-addform:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+/*********************** content-input-6 ***********************/
+.content-input-6 {
+    width: 100%;
+    background-color: #DFF1FF;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.content-input-6 .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 15rem;
+}
+.content-input-6 .container.active{
+    border: 3px solid #003159;
+}
+.content-input-6 .container{
+    border: 3px dashed #003159;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.content-input-6 .head-addform:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+div span {
+    text-align: center;
+}
+
+.form-header span {
+    font-size: 15px;
+}
+
+.form-img i {
+    font-size: 5rem;
+}
+
+.form-footer span {
+    font-size: 0.5rem;
+}
+.content-input-6 .container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+/*********************** button ***********************/
+button {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #003159;
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border: #003159;
+    transition: .3s ease-in-out;
+}
+
+button:hover {
+    background-color: #425261;
+}
+
+.button {
+    text-align: right;
+    padding-right: 40px;
+}
+
+/*********************** footer ***********************/
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: #003159;
+}
+
+.Connect-con h1 {
+    padding-top: 10px;
+    font-family: 'poppins', sans-serif;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.Connect-con span {
+    font-family: 'poppins', sans-serif;
+    color: #425261;
+    font-size: 10px;
+}
+
+/*********************** copyright ***********************/
+.copyright {
+    width: 100%;
+    height: 60px;
+    background-color: #2b2b2b;
+}
+
+.copyright-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.copyright-grid p {
+    color: #fff;
+    font-size: 10px;
+    margin-top: 20px;
+}
+
+.copyright-grid a {
+    color: #DFF1FF;
+}
+
+.copyright-grid .copytext {
+    justify-self: flex-start;
+    align-self: center;
+
+}
+
+.copyright-grid .language {
+    justify-self: flex-end;
+    align-self: center;
+
+}
