@@ -1,3 +1,9 @@
+<?php
+// session_start();
+// 	echo $_SESSION["email"];
+// 	echo $_SESSION["otp"];
+// 	echo $_SESSION["otpdet"];
+?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
 
@@ -8,9 +14,9 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="style.css">
   
-  <TITLE> Loginsss </TITLE>
+  <TITLE> Login </TITLE>
 </HEAD>
-
+<link rel="canonical" href="login1.php" />
 <body>
   <div class="navtop">
     <form >
@@ -62,16 +68,18 @@
       <div class="col">
         <div class="con-r">
           <div class="boxinput">
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control" id="input-email" placeholder="name@example.com">
-              <label for="input-email">Email address</label>
-              <button for="input-email" type="email" class="bt-send">กดเพื่อส่ง OTP</button>
+            <div class="form-floating">
+              <div id="error_msg"></div>
+              <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+              <label for="email">Email address</label>
+              <button type="email" class="bt-send" onclick=send_otp() required>กดเพื่อส่ง OTP</button>
             </div>
             <div class="form-floating">
-              <input type="password" class="form-control" id="input-otp" placeholder="OTP">
-              <label for="input-otp">OTP</label>
+              <input type="password" class="form-control" id="Login" placeholder="OTP" required>
+              <label for="Login">OTP</label>
+              <span id="otp_error" class="field_error"></span>
               <div class="button">
-                <button type="button" class="bt-ok">Login</button>
+                <button type="button" class="bt-ok" onclick="submit_otp()" required>Login</button>
               </div>
             </div>
           </div>
@@ -79,6 +87,59 @@
       </div>
     </div>
   </div>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script src="jQuery-OTP.js"></script>
+  <script>
+function send_otp(){
+  var email=jQuery('#email').val();
+  alert("Recipient Verification ! Please Check box in Mail  :"+ email);
+	jQuery.ajax({
+		url:'send_otp.php',
+		type:'post',
+		data:'email='+email,
+		success:function(result){
+      if(result=='yes'){
+        jQuery('.second_box').show();
+				jQuery('.first_box').hide();
+
+			}
+			if(result=='not_exist'){
+				jQuery('#email_error').html('Please enter valid email');
+        alert("Please enter valid email")
+			}
+		}
+	});
+}
+
+function submit_otp(){
+	var email=jQuery('#email').val();
+	var login=jQuery('#Login').val();
+
+  // alert("Login!"+"<br>"+ email+ login);
+
+	jQuery.ajax({
+		url:'check_otp.php',
+		type:'post',
+		data:'email='+email+'&Login='+login,
+		success:function(result){
+			if(result=='not_exist'){
+				jQuery('#otp_error').html('Please enter valid email');
+				// jQuery('#form-control').html('Please enter valid email',placeholder="OTP");
+        alert("This fail!");
+
+			}
+			if(result=='yes'){
+				// window.location='1_consent.php';
+				// jQuery('#email_error').html('email ok');
+        alert("Successful !"+ email);
+
+				exit;
+			}
+			
+		}
+	});
+}
+</script>
 </body>
 
 </HTML>
