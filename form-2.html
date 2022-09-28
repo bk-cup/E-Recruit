@@ -18,20 +18,19 @@
     <header>
         <nav>
             <div class="nav-con">
-                <div class="container">
-                    <div class="title">
+                <div class="nav-container">
+                    <img src="../UI/img/logo.png" alt="Logo">
+                    <div class="nav-bar">
                         <h1>Summit Auto Body Industry</h1>
                     </div>
-                    <div class="logo">
-                        <img src="../UI/img/logo.png" alt="Logo">
-                    </div>
+
                 </div>
             </div>
         </nav>
         <!-- end nav -->
     </header>
     <!-- end header -->
-    <form name="frm1" method="post" action="insert-process.php">
+    <form id="form" name="frm1" method="post" action="insert-process.php">
         <section class="content">
             <div class="container">
                 <div class="content-heading">
@@ -39,69 +38,95 @@
                 </div>
                 <div class="content-input-1">
                     <div class="con-name-title">
-                        <label for="Tname" class="form-label">ชื่อต้น</label>
-                        <select id=Tname name="Tname" class="form-select" aria-label="Default select example">
-                            <option gmnsrymsrsm>นาย</option>
-                            <option gmnsrymsrsm>นาง</option>
-                            <option gmnsrymsrsm>นางสาว</option>
-                        </select>
+                        <div class="input-control-dropdown">
+                            <label for="Tname" class="form-label">ชื่อต้น</label>
+                            <select id=Tname name="Tname" class="form-select" aria-label="Default select example">
+                                <option value="" selected disabled hidden>ระบุ</option>
+                                <option gmnsrymsrsm>นาย</option>
+                                <option gmnsrymsrsm>นาง</option>
+                                <option gmnsrymsrsm>นางสาว</option>
+                            </select>
+                            <div id="error" class="error"></div>
+                        </div>
                     </div>
                     <!-- end name-title -->
                     <div class="con-fullname">
+
                         <div class="con-name">
-                            <label for="Tname" class="form-label">ชื่อ</label>
+                            <label for="Fname" class="form-label">ชื่อ</label>
                             <div class="form-floating">
                                 <input type="text" class="form-control" name="Fname" id="Fname" placeholder="ชื่อจริง">
                                 <label for="Fname">ชื่อ</label>
+                                <div id="error" class="error"></div>
                             </div>
                         </div>
 
                         <div class="con-lname">
-                            <label for="Tname" class="form-label">นามสกุล</label>
+                            <label for="Lname" class="form-label">นามสกุล</label>
                             <div class="form-floating">
                                 <input type="text" class="form-control" name="Lname" id="Lname" placeholder="นามสกุล">
                                 <label for="Lname">นามสกุล</label>
+                                <div id="error" class="error"></div>
                             </div>
                         </div>
 
                     </div>
                     <!-- end fullname -->
                     <div class="con-position">
-                        <label for="Position" class="form-label">ตำแหน่งที่สนใจ</label>
-                        <select id=Position name="Position" class="form-select" aria-label="Default select example">
-                            <option>Excutive Secretary</option>
-                            <option>General Manager</option>
-                            <option>Plant Manager</option>
-                            <option>Sales Manager</option>
-                        </select>
+                        <div class="con-Input success">
+                            <div class="input-control-dropdown">
+                                <label for="Position" class="form-label">ตำแหน่งที่สนใจ</label>
+                            <select id=Position name="Position" class="form-select" aria-label="Default select example">
+                                <option value="" selected disabled hidden>ระบุ</option>
+                                <option>Excutive Secretary</option>
+                                <option>General Manager</option>
+                                <option>Plant Manager</option>
+                                <option>Sales Manager</option>
+                            </select>
+                            <div id="error" class="error"></div>
+                            </div>
+                        </div>
                     </div>
                     <!-- end position -->
-                    <div class="con-salary">
-                        <label for="Salary" class="form-label">เงินเดือนที่ต้องการ</label>
-                        <input type="text" class="form-control" name="Salary" id="Salary" placeholder="เงินเดือนที่ต้องการ">
+                    <div class="con-salary ">
+                        <div class="input-control">
+                            <label for="Salary" class="form-label">เงินเดือนที่ต้องการ</label>
+                            <input type="text" class="form-control" name="Salary" id="Salary" placeholder="เงินเดือนที่ต้องการ">
+                            <div id="error" class="error"></div>
+                        </div>
                     </div>
                     <div class="con-startDate">
+                        <div class="input-control-dropdown">
                         <label for="StartDate" class="form-label">เริ่มงานได้วันไหน</label>
                         <select id="StartDate" name="StartDate" class="form-select" aria-label="Default select example">
+                            <option value="" selected disabled hidden>ระบุ</option>
                             <option>โดยทันที</option>
                             <option>ใน 1-2 สัปดาห์</option>
                             <option>ใน 3-4 สัปดาห์</option>
                             <option>ใน 5-12 สัปดาห์</option>
                             <option>มากกว่า 12 สัปดาห์</option>
                         </select>
+                        <div id="error" class="error"></div>
+                    </div>
                     </div>
                 </div>
                 <!-- end content-input-1 -->
                 <div class="content-input-2">
                     <div class="con-location">
                         <div class="DB-location">
-                            <label for="Address" class="form-label">ที่อยู่ปัจจุบัน</label>
-                        <textarea class="form-control" name="Address" id="Address" rows="3"></textarea>
+                        <div class="input-control-area">
+                                <label for="Address" class="form-label">ที่อยู่ปัจจุบัน</label>
+                                <textarea class="form-control" name="Address" id="Address" rows="3"></textarea>
+                                <div id="error" class="error"></div>
+                            </div>
                         </div>
                     </div>
                     <div class="con-phone">
-                        <label for="phone" class="form-label">เบอร์โทรศัพท์</label>
-                        <input type="text" class="form-control" name="phone" id="phone" placeholder="เบอร์โทรศัพท์">
+                        <div class="input-control">
+                            <label for="phone" class="form-label">เบอร์โทรศัพท์</label>
+                            <input type="text" class="form-control" name="phone" id="phone" placeholder="เบอร์โทรศัพท์">
+                            <div id="error" class="error"></div>
+                        </div>
                     </div>
                     <div class="con-email">
                         <label for="Email" class="form-label">E-mail</label>
@@ -111,22 +136,22 @@
                         <label for="Residence" class="form-label">การอยู่อาศัย</label>
                         <div class="container">
                             <div class="form-check" name="Residence" id="Residence">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" value="อาศัยกับครอบครัว" id="choose-1"
-                                    checked>
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    value="อาศัยกับครอบครัว" id="choose-1" checked>
                                 <label class="form-check-label" for="choose-1">
                                     อาศัยกับครอบครัว
                                 </label>
                             </div>
                             <div class="form-check" name="Residence" id="Residence">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" value="บ้านตัวเอง" id="choose-2"
-                                    checked>
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" value="บ้านตัวเอง"
+                                    id="choose-2">
                                 <label class="form-check-label" for="choose-2">
                                     บ้านตัวเอง
                                 </label>
                             </div>
                             <div class="form-check" name="Residence" id="Residence">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" value="บ้านเช่าหรือหอพัก" id="choose-3"
-                                    checked>
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    value="บ้านเช่าหรือหอพัก" id="choose-3">
                                 <label class="form-check-label" for="choose-3">
                                     บ้านเช่าหรือหอพัก
                                 </label>
@@ -177,20 +202,28 @@
                         <div class="con-talent">
                             <h2>Talent 1</h2>
                             <div class="con-car">
+                                <div class="input-control-dropdown">
                                 <label for="DriveCar" class="form-label">ขับรถยนต์</label>
-                                <select id=DriveCar name="DriveCar" class="form-select" aria-label="Default select example">
+                                <select id=DriveCar name="DriveCar" class="form-select"
+                                    aria-label="Default select example">
                                     <option value="" selected disabled hidden>ระบุ</option>
                                     <option>ได้</option>
                                     <option>ไม่ได้</option>
                                 </select>
+                                <div id="error" class="error"></div>
+                            </div>
                             </div>
                             <div class="con-computer">
+                                <div class="input-control-dropdown">
                                 <label for="Computer" class="form-label">คอมพิวเตอร์</label>
-                                <select id=Computer name="Computer" class="form-select" aria-label="Default select example">
+                                <select id=Computer name="Computer" class="form-select"
+                                    aria-label="Default select example">
                                     <option value="" selected disabled hidden>ระบุ</option>
                                     <option>ได้</option>
                                     <option>ไม่ได้</option>
                                 </select>
+                                <div id="error" class="error"></div>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -214,6 +247,18 @@
                     </div>
                 </div>
                 <!-- end content-input-6 -->
+                <div class="content-input-7">
+                    <div class="con">
+                        <h4>File Upload Resume/CV</h4>
+                        <form action="#">
+                            <div class="con-file-input"></div>
+                        </form>
+                        <section class="progress-area"></section>
+                        <section class="uploaded-area"></section>
+                    </div>
+                    <script src="RF-dropfile-.js"></script>
+                </div>
+                <!-- end content-input-7 -->
                 <div class="button">
                     <button type="submit" class="bt-submit">ส่งใบสมัคร</button>
                 </div>
@@ -262,6 +307,7 @@
 
 
     <script src="form-2.js"></script>
+    <script src="form-2-checkIn.js"></script>
 </body>
 
 </html>

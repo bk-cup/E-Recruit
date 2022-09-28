@@ -20,7 +20,8 @@ header {
     z-index: 99;
     transition: top 0.3 ease-out;
 }
-header.hide{
+
+header.hide {
     top: -61px;
 }
 
@@ -30,29 +31,47 @@ header.hide{
     margin: 0 auto;
 }
 
-.nav-con .container{
-    width: 100%;
-    height: auto;
+.nav-container {
+
+    display: flex;
+
 }
-.title{
-    position: absolute;
-    text-align: center;
-    justify-content: center;
+
+.nav-container :where(img, div) {
     align-items: center;
+    justify-content: space-between;
 }
-.nav-con h1 {
+
+@media (max-width: 600px) {
+    .nav-container {
+        display: flex;
+    }
+    .nav-bar h1 {
+        justify-content: left;
+    }
+
+.nav-bar {
+    width: 0%;
+    margin-top: auto;
+}
+}
+
+.nav-bar {
+    width: 95%;
+    margin-top: auto;
+}
+
+.nav-bar h1 {
     font-size: 1rem;
-    color: #fff;
-    width: 940px;
-    margin-top: 5px;
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
     font-family: 'poppins', sans-serif;
     letter-spacing: 1px;
-
+    display: flex;
+    justify-content: center;
 }
 
 .nav-con img {
-
     width: 55px;
     height: 35px;
 }
@@ -113,7 +132,23 @@ h2 {
 
 }
 
-.con-fullname .con-lname {}
+
+.con-fullname .con-lname {
+    
+}
+.form-floating.success input {
+    border-color: #09c372;
+}
+
+.form-floating.error input {
+    border-color: #ff3860;
+}
+
+.form-floating .error {
+    color: #ff3860;
+    font-size: 16px;
+    height: 13px;
+}
 
 .con-position {
     margin-bottom: 20px;
@@ -123,9 +158,11 @@ h2 {
     margin-bottom: 20px;
 }
 
+
 .con-startDate {
     margin: 10px 0;
 }
+
 
 /*********************** content-input-2 ***********************/
 .content-input-2 {
@@ -153,15 +190,18 @@ h2 {
 .con-residence {
     margin: 10px 0;
 }
-.con-residence .container{
+
+.con-residence .container {
     display: flex;
     flex-direction: row;
 }
-.con-residence .container div{
-    
+
+.con-residence .container div {
+
     margin-right: 50px;
-    
+
 }
+
 /*********************** content-input-3 ***********************/
 .content-input-3 {
     padding: 10px 0;
@@ -169,8 +209,9 @@ h2 {
     border-radius: 10px;
     margin-bottom: 20px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    
+
 }
+
 .content-input-3 .head-addform:hover {
     background-color: rgba(0, 0, 0, 0.15);
     cursor: pointer;
@@ -241,6 +282,7 @@ h2 {
     width: 40px;
     margin-top: 12px;
 }
+
 .content-input-4 .head-addform:hover {
     background-color: rgba(0, 0, 0, 0.15);
     cursor: pointer;
@@ -308,6 +350,7 @@ h2 {
 .con-talent .con-computer {
     margin-bottom: 10px;
 }
+
 .content-input-5 .head-addform:hover {
     background-color: rgba(0, 0, 0, 0.15);
     cursor: pointer;
@@ -322,17 +365,20 @@ h2 {
     margin-bottom: 20px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
-.content-input-6 .container{
+
+.content-input-6 .container {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     min-height: 15rem;
 }
-.content-input-6 .container.active{
+
+.content-input-6 .container.active {
     border: 3px solid #003159;
 }
-.content-input-6 .container{
+
+.content-input-6 .container {
     border: 3px dashed #003159;
     width: 100%;
     border-radius: 5px;
@@ -341,6 +387,7 @@ h2 {
     justify-content: center;
     flex-direction: column;
 }
+
 .content-input-6 .head-addform:hover {
     background-color: rgba(0, 0, 0, 0.15);
     cursor: pointer;
@@ -361,11 +408,129 @@ div span {
 .form-footer span {
     font-size: 0.5rem;
 }
-.content-input-6 .container img{
+
+.content-input-6 .container img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 5px;
+}
+
+/*********************** input-7 ***********************/
+
+.content-input-7{
+    width: 100%;
+    min-height: 50vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #DFF1FF;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
+}
+.content-input-7 .con{
+    border: 2px dashed #699 1.95px 1.95px 2.6px;
+    height: 100%;
+    border: 3px dashed #003159;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 15rem;
+}
+.content-input-7 h4{
+    color: #699;
+    font-size: 27px;
+    font-weight: 600;
+    text-align: center;
+}
+.content-input-7 form{
+    height: 167px;
+    display: flex;
+    margin: 30px 0;
+    cursor: pointer;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+}
+form :where(i,p){
+    color: #699;
+}
+form i{
+    font-size: 50px;
+}
+form p{
+    font-size: 16px;
+    margin-top: 15px;
+}
+section .row{
+    background: #C6EBC5;
+    margin-bottom: 10px;
+    list-style: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section .row i{
+    font-size: 30px;
+    color: #699;
+}
+section .details span{
+    font-size: 14px;
+}
+.progress-area .row .content{
+    width: 100%;
+    margin-left: 15px;
+}
+.progress-area .details{
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    justify-content: space-between;
+}
+.progress-area .progress-bar{
+    height: 6px;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 4px;
+    border-radius: 30px;
+}
+.progress-bar .progress{
+    height: 100%;
+    width: 0%;
+    background: #699;
+    border-radius: inherit;
+}
+/* *************************** Scroll-bar ************************** */
+.uploaded-area{
+    max-height: 150px;
+    overflow-y: scroll;
+}
+.uploaded-area::-webkit-scrollbar{
+    width: 0px;
+}
+
+.uploaded-area .row .content{
+    display: flex;
+    align-items: center;
+}
+.uploaded-area .row .details{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+.uploaded-area .details .size{
+    font-size: 11px;
+    color: #404040;
+}
+.uploaded-area .uil-check{
+    color: #699;
+    font-size: 30px;
 }
 /*********************** button ***********************/
 button {
@@ -440,5 +605,53 @@ footer {
 .copyright-grid .language {
     justify-self: flex-end;
     align-self: center;
+
+}
+
+/************** Text Row control ***************/
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control.error div{
+    color: #ff3860;
+    font-size: 16px;
+    height: 13px;
+}
+/************** Text-area control ***************/
+.input-control-area.success textarea {
+    border-color: #09c372;
+}
+.input-control-area.error textarea {
+    border-color: #ff3860;
+}
+.input-control-area.error div{
+    color: #ff3860;
+    font-size: 16px;
+    height: 13px;
+}
+/************** Text-Dropdown control ***************/
+.input-control-dropdown.success select {
+    border-color: #09c372;
+}
+.input-control-dropdown.error select {
+    border-color: #ff3860;
+}
+.input-control-dropdown.error div{
+    color: #ff3860;
+    font-size: 16px;
+    height: 13px;
+}
+
+@media (max-width: 600px) {
+    .nav-bar h1 {
+        justify-content: left;
+    }
+
 
 }
