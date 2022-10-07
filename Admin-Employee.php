@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!----======== CSS ======== -->
-    <link rel="stylesheet" href="RF-Admin-Dashboard-2--.css">
+    <link rel="stylesheet" href="RF-Admin-Dashboard-2-.css">
 
     <!----===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -85,7 +85,8 @@
                                     <h3>
                                         <?echo $row["EMPOLYEE_LASTNAME"]?>
                                     </h3>
-                                    <button class="bt-detail btn" role="button">Detail</button>
+                                    <?include("Pop-up-Modal.php")?>
+                                    
                                 </div>
                             </div>
                             <br>
@@ -94,7 +95,8 @@
                     </div>
                 </div>
     </section>
-    <script src="RF-Admin-Dashboard-2-.js"></script>
+    <script src="RF-Admin-Dashboard-2.js"></script>
+    <script src="Pop-up-Modal.css"></script>
 </body>
 
 </html>
