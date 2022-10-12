@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!----======== CSS ======== -->
-    <link rel="stylesheet" href="RF-Admin---.css">
+    <link rel="stylesheet" href="RF-Admin-Dashboard-2--.css">
      
     <!----===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -15,10 +15,85 @@
     <!--<title>Admin Dashboard Panel</title>--> 
 </head>
 <body>
-    
-<!---------------------- Side bar ---------------------->
-    <?include('Admin-Menu-bar.php')?>
-    
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="https://images.unsplash.com/photo-1586374579358-9d19d632b6df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" height="40px" alt="">
+            </div>
+
+            <span class="logo_name">Admin</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="RF-Admin-Dashboard-2.html">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Dahsboard</span>
+                </a></li>
+
+                 <!-- <li><a href="RF-Admin-Employee.html">
+                        <i class="uil uil-users-alt"></i>
+                        <span class="link-name">Empolyee</span>
+                    </a>
+                </li> -->
+                <!-- ------------------------------------------- -->
+
+                <li>
+                    <div class="iocn-link">
+                        <a href="RF-Admin-Employee.html">
+                            <i class="uil uil-users-alt"></i>
+                            <span class="link_name">Empolyee</span>
+                        </a>
+                        <i class="uil uil-angle-down arrow"></i>
+                    </div>
+                    <ul class="sub-menu">
+                        <li><a class="link_name" href="#">Category</a></li>
+                        <li><a href="#">HTML & CSS</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">PHP & MySQL</a></li>
+                    </ul>
+                </li>
+
+                <!-- ---------------------------------------- -->
+
+
+                <li><a href="#">
+                    <i class="uil uil-chart"></i>
+                    <span class="link-name">Manage Position</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-thumbs-up"></i>
+                    <span class="link-name">Like</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-comments"></i>
+                    <span class="link-name">Comment</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="uil uil-share"></i>
+                    <span class="link-name">Share</span>
+                </a></li>
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="#">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                </a>
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
 
     <section class="dashboard">
         <div class="top">
@@ -120,11 +195,24 @@
                 </div>
             </div>
         </div>
-   
     </section>
 
-    
-    
+    <script>
+        let arrow = document.querySelectorAll(".arrow");
+        for (var i = 0; i < arrow.length; i++) {
+            arrow[i].addEventListener("click", (e) => {
+                let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+                arrowParent.classList.toggle("showMenu");
+            });
+        }
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn);
+        sidebarBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        });
+    </script>
+    <script src="RF-Admin-Dashboard-2.js"></script>
 
 </body>
 </html>
