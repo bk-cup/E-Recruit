@@ -10,7 +10,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link href='https://css.gg/css' rel='stylesheet'><!-- icon -->
-    <link rel="stylesheet" href="form-2-.css">
+    <link rel="stylesheet" href="form-2---.css">
     <title>Summit-Register</title>
 </head>
 
@@ -72,6 +72,22 @@
 
                     </div>
                     <!-- end fullname -->
+                    <div class="con-workplace">
+                        <div class="con-Input success">
+                            <div class="input-control-dropdown">
+                                <label for="workplace" class="form-label">เลือกสถานที่ทำงาน</label>
+                            <select id=workplace name="workplace" class="form-select" aria-label="Default select example">
+                                <option value="" selected disabled hidden>ระบุ</option>
+                                <option>SUMMIT SAMUTPRAKARN</option>
+                                <option>SUMMIT LAEMCHABANG</option>
+                                <option>SUMMIT RAYONG</option>
+                                <option>SUMMIT AYUTTHAYA</option>
+                            </select>
+                            <div id="error" class="error"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end workplace -->
                     <div class="con-position">
                         <div class="con-Input success">
                             <div class="input-control-dropdown">
@@ -161,17 +177,19 @@
                 </div>
                 <div class="content-input-3">
                     <div class="workExp">
-                        <div class="workExp-flex">
-                            <div class="head-text">
-                                <h2>Work Experience</h2>
-                            </div>
-                            <div class="head-addform">
-                                <i class="uil uil-plus"></i>
-                                <h2>Add</h2>
-                            </div>
+                      <div class="workExp-flex">
+                        <div class="head-text">
+                          <h2>Work Experience  <span class="count-num"> : </span></h2>
                         </div>
+                        <div class="head-addform">
+                          <i class="uil uil-plus"></i>
+                          <h2>Add</h2>
+                        </div>
+                      </div>
+                      <ul class="formLists">
+                      <!-- form control -->
                     </div>
-                </div>
+                  </div>
                 <!-- end content-input-3 -->
                 <div class="content-input-4">
                     <div class="language">
@@ -307,7 +325,8 @@
 
 
     <script src="form-2.js"></script>
-    <script src="form-2-checkIn.js"></script>
+    <script src="form-2-checkIn-.js"></script>
+    <script src="RF-todolist--.js"></script>
 </body>
 
 </html>
