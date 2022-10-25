@@ -209,7 +209,7 @@ h2 {
 
 }
 
-.content-input-3 .head-addform:hover {
+.content-input-3 .bt-work-addform:hover {
     background-color: rgba(0, 0, 0, 0.15);
     cursor: pointer;
 }
@@ -231,52 +231,52 @@ h2 {
     margin: 10px;
 }
 
-.workExp .head-addform {
+.workExp .bt-work-addform {
     display: flex;
     align-items: center;
     transition: .3s ease-in-out;
     border-radius: 10px;
 }
 
-.workExp .head-addform i {
+.workExp .bt-work-addform i {
     margin-right: 2px;
     margin-top: 3.5px;
     font-size: 20px;
 }
 
-.workExp .head-addform h2 {
+.workExp .bt-work-addform h2 {
     width: 40px;
     margin-top: 12px;
 }
-.workExp .head{
-    margin: 0;
-    padding: 0;
-    background-color: #09c372;
-}
-  .workExp .formLists {
+
+.workExp .formLists {
     width: 100%;
     height: 100%;
     /* overflow-y: auto; */
     padding-right: 10px;
     align-items: center;
     transition: 0.3 ease-in-out
-  }
-  .formLists .list {
+}
+.formLists .list-work {
     list-style: none;
     position: relative;
     /* cursor: pointer; */
     margin-bottom: 10px;
-  }
-.formLists .list .input-control{
+}
+.formLists .list-work .input-control{
     margin-bottom: 10px;
 }
 
-.formLists .list .input-control-area textarea{
+.formLists .list-work .input-control-area textarea{
     resize: none;
 }
 
+.formLists .list-work #conDate{
+    display: flex;
+    justify-content: space-between;
+}
 
-  .formLists .list i {
+.formLists .list-work i {
     position: absolute;
     top:-13%;
     right: 15px;
@@ -291,10 +291,10 @@ h2 {
   /* .formLists .list:hover i {
     display: inline-flex;
   } */
-  .formLists .list i:hover {
+  .formLists .list-work i:hover {
     opacity: 1;
   }
-  .formLists .list hr {
+  .formLists .list-work hr {
     display: block;
     height: 2.5px;
     border: 0;
@@ -302,6 +302,46 @@ h2 {
     margin: 30px 0;
     padding: 0;
 }
+.checkdate{
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+  }
+.checkdateClose{
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+  }
+.input-field{
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+
+.input-field input, select{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+.input-field input :focus,
+.input-field select:focus{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+.input-field select,
+.input-field input[type="date"]{
+    color: #707070;
+}
+.input-field input[type="date"]:valid{
+    color: #333;
+}
+
+
+ 
 
 /*********************** content-input-4 ***********************/
 .content-input-4 {
@@ -317,34 +357,96 @@ h2 {
     position: relative;
     width: 95%;
     margin: 0 auto;
+}
+.language-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
-
-.language .head-addform {
+.content-input-4 .bt-language-addform:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+.language .bt-language-addform {
     display: flex;
     align-items: center;
     transition: .3s ease-in-out;
     border-radius: 10px;
 }
 
-.language .head-addform i {
+.language .bt-language-addform i {
     margin-right: 2px;
     margin-top: 3.5px;
+    font-size: 20px;
 }
 
-.language .head-addform h2 {
+.language .bt-language-addform h2 {
     width: 40px;
     margin-top: 12px;
 }
-
-.content-input-4 .head-addform:hover {
-    background-color: rgba(0, 0, 0, 0.15);
-    cursor: pointer;
+.language-flex .head-text h2{
+    font-weight: 600;
+    margin: 10px;
 }
 
+.language .formLists-language {
+    width: 100%;
+    height: 100%;
+    /* overflow-y: auto; */
+    padding-right: 10px;
+    align-items: center;
+    transition: 0.3 ease-in-out
+}
 
+.formLists-language .list-language i {
+    position: absolute;
+    top:-13%;
+    right: 15px;
+    transform: translateY(100%);
+    font-size: 20px;
+    color: #707070;
+    padding: 5px;
+    opacity: 0.6;
+    cursor: pointer;
+    /* display: none; */
+  }
+  /* .formLists-language .list:hover i {
+    display: inline-flex;
+  } */
+  .formLists-language .list-language i:hover {
+    opacity: 1;
+  }
+  .formLists-language .list-language hr {
+    display: block;
+    height: 2.5px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 30px 0;
+    padding: 0;
+}
+.list-language #grid{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    justify-items: center;
+    
+}
+.list-language #grid label{
+    padding-top: 20px;
+}
+.formLists-language .list-language #grid{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    justify-items: center;
+    
+}
+.formLists-language .list-language #grid label{
+    padding-top: 20px;
+}
+.formLists-language .list-language #L-more h2{
+    
+}
 /*********************** content-input-5 ***********************/
 .content-input-5 {
     padding: 10px 0;
