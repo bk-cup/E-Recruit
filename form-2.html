@@ -30,7 +30,7 @@
         <!-- end nav -->
     </header>
     <!-- end header -->
-    <form id="form" name="frm1" method="post" action="insert-process----.php">
+    <form id="form" name="frm1" method="post" action="insert-process.php">
         <section class="content">
             <div class="container">
                 <div class="content-heading">
@@ -76,14 +76,15 @@
                         <div class="con-Input success">
                             <div class="input-control-dropdown">
                                 <label for="workplace" class="form-label">เลือกสถานที่ทำงาน</label>
-                            <select id=workplace name="workplace" class="form-select" aria-label="Default select example">
-                                <option value="" selected disabled hidden>ระบุ</option>
-                                <option>SUMMIT SAMUTPRAKARN</option>
-                                <option>SUMMIT LAEMCHABANG</option>
-                                <option>SUMMIT RAYONG</option>
-                                <option>SUMMIT AYUTTHAYA</option>
-                            </select>
-                            <div id="error" class="error"></div>
+                                <select id=workplace name="workplace" class="form-select"
+                                    aria-label="Default select example">
+                                    <option value="" selected disabled hidden>ระบุ</option>
+                                    <option>SUMMIT SAMUTPRAKARN</option>
+                                    <option>SUMMIT LAEMCHABANG</option>
+                                    <option>SUMMIT RAYONG</option>
+                                    <option>SUMMIT AYUTTHAYA</option>
+                                </select>
+                                <div id="error" class="error"></div>
                             </div>
                         </div>
                     </div>
@@ -92,14 +93,15 @@
                         <div class="con-Input success">
                             <div class="input-control-dropdown">
                                 <label for="Position" class="form-label">ตำแหน่งที่สนใจ</label>
-                            <select id=Position name="Position" class="form-select" aria-label="Default select example">
-                                <option value="" selected disabled hidden>ระบุ</option>
-                                <option>Excutive Secretary</option>
-                                <option>General Manager</option>
-                                <option>Plant Manager</option>
-                                <option>Sales Manager</option>
-                            </select>
-                            <div id="error" class="error"></div>
+                                <select id=Position name="Position" class="form-select"
+                                    aria-label="Default select example">
+                                    <option value="" selected disabled hidden>ระบุ</option>
+                                    <option>Excutive Secretary</option>
+                                    <option>General Manager</option>
+                                    <option>Plant Manager</option>
+                                    <option>Sales Manager</option>
+                                </select>
+                                <div id="error" class="error"></div>
                             </div>
                         </div>
                     </div>
@@ -107,30 +109,32 @@
                     <div class="con-salary ">
                         <div class="input-control">
                             <label for="Salary" class="form-label">เงินเดือนที่ต้องการ</label>
-                            <input type="text" class="form-control" name="Salary" id="Salary" placeholder="เงินเดือนที่ต้องการ">
+                            <input type="text" class="form-control" name="Salary" id="Salary"
+                                placeholder="เงินเดือนที่ต้องการ">
                             <div id="error" class="error"></div>
                         </div>
                     </div>
                     <div class="con-startDate">
                         <div class="input-control-dropdown">
-                        <label for="StartDate" class="form-label">เริ่มงานได้วันไหน</label>
-                        <select id="StartDate" name="StartDate" class="form-select" aria-label="Default select example">
-                            <option value="" selected disabled hidden>ระบุ</option>
-                            <option>โดยทันที</option>
-                            <option>ใน 1-2 สัปดาห์</option>
-                            <option>ใน 3-4 สัปดาห์</option>
-                            <option>ใน 5-12 สัปดาห์</option>
-                            <option>มากกว่า 12 สัปดาห์</option>
-                        </select>
-                        <div id="error" class="error"></div>
-                    </div>
+                            <label for="StartDate" class="form-label">เริ่มงานได้วันไหน</label>
+                            <select id="StartDate" name="StartDate" class="form-select"
+                                aria-label="Default select example">
+                                <option value="" selected disabled hidden>ระบุ</option>
+                                <option>โดยทันที</option>
+                                <option>ใน 1-2 สัปดาห์</option>
+                                <option>ใน 3-4 สัปดาห์</option>
+                                <option>ใน 5-12 สัปดาห์</option>
+                                <option>มากกว่า 12 สัปดาห์</option>
+                            </select>
+                            <div id="error" class="error"></div>
+                        </div>
                     </div>
                 </div>
                 <!-- end content-input-1 -->
                 <div class="content-input-2">
                     <div class="con-location">
                         <div class="DB-location">
-                        <div class="input-control-area">
+                            <div class="input-control-area">
                                 <label for="Address" class="form-label">ที่อยู่ปัจจุบัน</label>
                                 <textarea class="form-control" name="Address" id="Address" rows="3"></textarea>
                                 <div id="error" class="error"></div>
@@ -177,19 +181,19 @@
                 </div>
                 <div class="content-input-3">
                     <div class="workExp">
-                      <div class="workExp-flex">
-                        <div class="head-text">
-                          <h2>Work Experience  <span class="count-num"> : </span></h2>
+                        <div class="workExp-flex">
+                            <div class="head-text">
+                                <h2>Work Experience <span class="count-num"> : </span></h2>
+                            </div>
+                            <div class="bt-work-addform">
+                                <i class="uil uil-plus"></i>
+                                <h2>Add</h2>
+                            </div>
                         </div>
-                        <div class="bt-work-addform">
-                          <i class="uil uil-plus"></i>
-                          <h2>Add</h2>
-                        </div>
-                      </div>
-                      <ul class="formLists">
-                      <!-- form control -->
+                        <ul class="formLists">
+                            <!-- form control -->
                     </div>
-                  </div>
+                </div>
                 <!-- end content-input-3 -->
                 <div class="content-input-4">
                     <div class="language">
@@ -197,125 +201,135 @@
                             <div class="head-text">
                                 <h2>Languages <span class="count-language"> : </span></h2>
                             </div>
-                            
+
                         </div>
-                        
-                            <li class="list-language pending" name="">
-                                <div id="grid" class="input-control-dropdown">
-                                    <label class="title">ภาษาอังกฤษ</label>
-                                    <label class="form-label">พูด</label>
-                                    <select id=workplace name="workplace" class="form-select" aria-label="Default select example">
-                                        <option value="" selected disabled hidden>ระบุ</option>
-                                        <option>ได้</option>
-                                        <option>ไม่ได้</option>
-                                    </select>
-                                    <label class="form-label">อ่าน</label>
-                                    <select id=workplace name="workplace" class="form-select" aria-label="Default select example">
-                                        <option value="" selected disabled hidden>ระบุ</option>
-                                        <option>ได้</option>
-                                        <option>ไม่ได้</option>
-                                    </select>
-                                    <label class="form-label">เขียน</label>
-                                    <select id=workplace name="workplace" class="form-select" aria-label="Default select example">
-                                        <option value="" selected disabled hidden>ระบุ</option>
-                                        <option>ได้</option>
-                                        <option>ไม่ได้</option>
-                                    </select>
-                                    <label class="title">ภาษาจีน</label>
-                                    <label class="form-label">พูด</label>
-                                    <select id=workplace name="workplace" class="form-select" aria-label="Default select example">
-                                        <option value="" selected disabled hidden>ระบุ</option>
-                                        <option>ได้</option>
-                                        <option>ไม่ได้</option>
-                                    </select>
-                                    <label class="form-label">อ่าน</label>
-                                    <select id=workplace name="workplace" class="form-select" aria-label="Default select example">
-                                        <option value="" selected disabled hidden>ระบุ</option>
-                                        <option>ได้</option>
-                                        <option>ไม่ได้</option>
-                                    </select>
-                                    <label class="form-label">เขียน</label>
-                                    <select id=workplace name="workplace" class="form-select" aria-label="Default select example">
-                                        <option value="" selected disabled hidden>ระบุ</option>
-                                        <option>ได้</option>
-                                        <option>ไม่ได้</option>
-                                    </select>
-                                    <label class="title">ภาษาญี่ปุ่น</label>
-                                    <label class="form-label">พูด</label>
-                                    <select id=workplace name="workplace" class="form-select" aria-label="Default select example">
-                                        <option value="" selected disabled hidden>ระบุ</option>
-                                        <option>ได้</option>
-                                        <option>ไม่ได้</option>
-                                    </select>
-                                    <label class="form-label">อ่าน</label>
-                                    <select id=workplace name="workplace" class="form-select" aria-label="Default select example">
-                                        <option value="" selected disabled hidden>ระบุ</option>
-                                        <option>ได้</option>
-                                        <option>ไม่ได้</option>
-                                    </select>
-                                    <label class="form-label">เขียน</label>
-                                    <select id=workplace name="workplace" class="form-select" aria-label="Default select example">
-                                        <option value="" selected disabled hidden>ระบุ</option>
-                                        <option>ได้</option>
-                                        <option>ไม่ได้</option>
-                                    </select>
+
+                        <li class="list-language pending" name="">
+                            <div id="grid" class="input-control-dropdown">
+                                <label class="title">ภาษาอังกฤษ</label>
+                                <label class="form-label">พูด</label>
+                                <select id=workplace name="Eng_speak" class="form-select"
+                                    aria-label="Default select example">
+                                    <option value="" selected disabled hidden>ระบุ</option>
+                                    <option>ได้</option>
+                                    <option>ไม่ได้</option>
+                                </select>
+                                <label class="form-label">อ่าน</label>
+                                <select id=workplace name="Eng_read" class="form-select"
+                                    aria-label="Default select example">
+                                    <option value="" selected disabled hidden>ระบุ</option>
+                                    <option>ได้</option>
+                                    <option>ไม่ได้</option>
+                                </select>
+                                <label class="form-label">เขียน</label>
+                                <select id=workplace name="Eng_write" class="form-select"
+                                    aria-label="Default select example">
+                                    <option value="" selected disabled hidden>ระบุ</option>
+                                    <option>ได้</option>
+                                    <option>ไม่ได้</option>
+                                </select>
+                                <label class="title">ภาษาจีน</label>
+                                <label class="form-label">พูด</label>
+                                <select id=workplace name="Chai_speak" class="form-select"
+                                    aria-label="Default select example">
+                                    <option value="" selected disabled hidden>ระบุ</option>
+                                    <option>ได้</option>
+                                    <option>ไม่ได้</option>
+                                </select>
+                                <label class="form-label">อ่าน</label>
+                                <select id=workplace name="Chai_read" class="form-select"
+                                    aria-label="Default select example">
+                                    <option value="" selected disabled hidden>ระบุ</option>
+                                    <option>ได้</option>
+                                    <option>ไม่ได้</option>
+                                </select>
+                                <label class="form-label">เขียน</label>
+                                <select id=workplace name="Chai_write" class="form-select"
+                                    aria-label="Default select example">
+                                    <option value="" selected disabled hidden>ระบุ</option>
+                                    <option>ได้</option>
+                                    <option>ไม่ได้</option>
+                                </select>
+                                <label class="title">ภาษาญี่ปุ่น</label>
+                                <label class="form-label">พูด</label>
+                                <select id=workplace name="Japan_speak" class="form-select"
+                                    aria-label="Default select example">
+                                    <option value="" selected disabled hidden>ระบุ</option>
+                                    <option>ได้</option>
+                                    <option>ไม่ได้</option>
+                                </select>
+                                <label class="form-label">อ่าน</label>
+                                <select id=workplace name="Japan_read" class="form-select"
+                                    aria-label="Default select example">
+                                    <option value="" selected disabled hidden>ระบุ</option>
+                                    <option>ได้</option>
+                                    <option>ไม่ได้</option>
+                                </select>
+                                <label class="form-label">เขียน</label>
+                                <select id=workplace name="Japan_write" class="form-select"
+                                    aria-label="Default select example">
+                                    <option value="" selected disabled hidden>ระบุ</option>
+                                    <option>ได้</option>
+                                    <option>ไม่ได้</option>
+                                </select>
                                 <div id="error" class="error"></div>
-                                
+
                             </div>
                             <div id="L-more" class="language-more">
-                                <label class="title">ภาษาอื่นๆ<ul class="formLists-language"></ul></label>
-                                <div class="bt-language-addform">
-                                    <i class="uil uil-plus"></i>
-                                    <h2>Add</h2>
+                                <div class="L-footer">
+                                    <label class="title">ภาษาอื่นๆ</label>
+                                    <div class="bt-language-addform">
+                                        <i class="uil uil-plus"></i>
+                                        <h2>Add</h2>
+                                    </div>
                                 </div>
+                                <ul class="formLists-language"></ul>
+
                             </div>
-                              <hr/>
-                            </li>
-                            <!-- form control -->
+                        </li>
+                        <!-- form control -->
                     </div>
                 </div>
                 <!-- end content-input-4 -->
                 <div class="content-input-5">
-                    <div class="talent">
-                        <div class="head-text">
-                            <h2>Talent</h2>
-                        </div>
-                        <div class="head-addform">
-                            <i class="uil uil-plus"></i>
-                            <h2>Add</h2>
-                        </div>
-                    </div>
+              <div class="talent">
+                        <div class="talent-flex">
+                            <div class="head-text">
+                                <h2>Talent <span class="count-talent"> : </span></h2>
+                            </div>
 
-                </div>
-                <div class="form-talent-1">
-                    <div class="container">
-                        <div class="con-talent">
-                            <h2>Talent 1</h2>
-                            <div class="con-car">
-                                <div class="input-control-dropdown">
-                                <label for="DriveCar" class="form-label">ขับรถยนต์</label>
-                                <select id=DriveCar name="DriveCar" class="form-select"
-                                    aria-label="Default select example">
-                                    <option value="" selected disabled hidden>ระบุ</option>
-                                    <option>ได้</option>
-                                    <option>ไม่ได้</option>
-                                </select>
-                                <div id="error" class="error"></div>
-                            </div>
-                            </div>
-                            <div class="con-computer">
-                                <div class="input-control-dropdown">
-                                <label for="Computer" class="form-label">คอมพิวเตอร์</label>
-                                <select id=Computer name="Computer" class="form-select"
-                                    aria-label="Default select example">
-                                    <option value="" selected disabled hidden>ระบุ</option>
-                                    <option>ได้</option>
-                                    <option>ไม่ได้</option>
-                                </select>
-                                <div id="error" class="error"></div>
-                            </div>
-                            </div>
                         </div>
+
+                        <li class="list-talent pending" name="">
+                            <div id="talent" class="input-control-dropdown">
+                                <label class="form-label">ขับรถยนต์</label>
+                                <select id=workplace name="Eng_speak" class="form-select"
+                                    aria-label="Default select example">
+                                    <option value="" selected disabled hidden>ระบุ</option>
+                                    <option>ได้</option>
+                                    <option>ไม่ได้</option>
+                                </select>
+                                <label class="form-label">คอมพิวเตอร์</label>
+                                <select id=workplace name="Eng_speak" class="form-select"
+                                    aria-label="Default select example">
+                                    <option value="" selected disabled hidden>ระบุ</option>
+                                    <option>ได้</option>
+                                    <option>ไม่ได้</option>
+                                </select>
+                            </div>
+                            <div class="talent-more">
+                                <div class="L-footer">
+                                    <label class="title">ความสามารถอื่นๆ</label>
+                                    <div class="bt-talent-addform">
+                                        <i class="uil uil-plus"></i>
+                                        <h2>Add</h2>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </li>
+                        <ul class="formLists-talent"></ul>
+                        <!-- form control -->
                     </div>
                 </div>
                 <!-- end content-input-5 -->
@@ -350,7 +364,7 @@
                 </div>
                 <!-- end content-input-7 -->
                 <div class="button">
-                    <button type="submit" class="bt-submit">ส่งใบสมัคร</button>
+                    <button type="submit" class="bt-submit" action="workprocess()">ส่งใบสมัคร</button>
                 </div>
                 <!-- button -->
             </div>
@@ -398,7 +412,7 @@
 
     <script src="form-2.js"></script>
     <script src="form-2-checkIn-.js"></script>
-    <script src="RF-todolist--.js"></script>
+    <script src="RF-todolist.js"></script>
 </body>
 
 </html>
